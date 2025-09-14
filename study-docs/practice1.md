@@ -5,6 +5,7 @@
 * jQuery 기반 슬라이더 플러그인
 * 웹에서 이미지나 컨텐츠를 가로/세로 슬라이드할 때 많이 쓰인다.
 * 요즘은 React/Vue 환경에서는 Swiper 같은 라이브러리가 더 많이 쓰인다고 함
+* https://bxslider.com/install
 
 ### css 파일 연결
 \<link>태그 이용  
