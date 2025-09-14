@@ -41,9 +41,12 @@ html, body{
     background-size: cover; 
 }
 
-.overlay{ /*배경이미지 위에 도트이미지 추가*/
-    background: url(../images/dot.png);
+.overlay-dot{ /*배경이미지 위에 도트이미지 추가*/
+    background: url(../images/dot.png) repeat;
+    opacity: 0.3; /* 플리커링 해결 투명도 30%로 만듬 */
     /*no-repeat속성 일부러 안씀*/
+    background-size: auto;/* dot 크기 조정 가능 */
+    pointer-events: none; /* 다른 요소 클릭 막히는 것 방지 */
     position: absolute; /*좌표의 절대값에 영향을 받게끔 설정*/
     /*absolute로 지정하면 공중에 뜬 상태가 됨
     그래서 다음에 오는 태그가 덮어버림*/
@@ -56,4 +59,14 @@ html, body{
     */
     width: 100%;
     height: 100vh;
+}
+
+.overlay-dark {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.2); /* 반투명 검은 레이어 */
+  pointer-events: none; /*아래요소 클릭방해안함*/
+  z-index: 9; /* dot보다 아래 */
 }
