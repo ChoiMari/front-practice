@@ -10,6 +10,7 @@ html, body{
 
 .background-01{
     background: url("../images/forest.jpg") no-repeat;
+    /*no-repeat : 이미지 반복 안함(이미지 1개만 보이게)*/
     width: 100%;
     height: 100vh; /*vh : 100%보다 실무에서 반응형에 안전*/
     /*viewport height (브라우저 화면 기준)*/
@@ -38,4 +39,21 @@ html, body{
     height: 100vh; 
     background-position: center center; 
     background-size: cover; 
+}
+
+.overlay{ /*배경이미지 위에 도트이미지 추가*/
+    background: url(../images/dot.png);
+    /*no-repeat속성 일부러 안씀*/
+    position: absolute; /*좌표의 절대값에 영향을 받게끔 설정*/
+    /*absolute로 지정하면 공중에 뜬 상태가 됨
+    그래서 다음에 오는 태그가 덮어버림*/
+    top: 0;/*좌표 가장 윗쪽에 붙게 함*/
+    z-index: 10;/*position:absolute; 공중에 떠있는거 해결*/
+    /*
+    CSS에서 요소의 쌓임 순서(stack order) 를 결정하는 속성
+    숫자가 높을수록 위에 올라감, 낮을수록 밑에 깔림.
+    모든 태그들은 z-index속성이 기본 0이라고 보면 된다
+    */
+    width: 100%;
+    height: 100vh;
 }
