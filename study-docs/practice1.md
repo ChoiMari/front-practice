@@ -51,3 +51,16 @@
         */
     } 
     ```
+### 폰트어썸
+* https://fontawesome.com/
+* 라이센스 : 무료
+* https://www.w3schools.com/icons/fontawesome5_intro.asp
+```html
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<!-- 
+ yourcode : Font Awesome 계정에서 발급받은 개인 키(실제 키로 바꿔야 함)
+ 개인키 없이 무료 아이콘 쓰려면 CDN CSS 링크로
+ 근데 CDN을 쓰면, css제공해주는 서버가 만약 다운이 됐을 때, 영향을 받음. 그래서 권장하지 않는다.
+ 프로젝트에 다운로드 받아서 다운로드 받은 파일을 import하는 방식을 권장.
+ -->
+```
