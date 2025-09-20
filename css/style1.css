@@ -1,15 +1,15 @@
 html, body{
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
 }
 
 .bx-wrapper, .bx-viewport, .slider{
-    width: 100%;
+    width: 100%; 
     height: 100%;
 } 
 
 .background-01{
-    background: url("../images/forest.jpg") no-repeat;
+    background: url("../images/ocean.jpg") no-repeat;
     /*no-repeat : 이미지 반복 안함(이미지 1개만 보이게)*/
     width: 100%;
     height: 100vh; /*vh : 100%보다 실무에서 반응형에 안전*/
@@ -26,7 +26,7 @@ html, body{
 }
 
 .background-02{
-    background: url("../images/winter.jpg") no-repeat;
+    background: url("../images/mountain.jpg") no-repeat;
     width: 100%;
     height: 100vh; 
     background-position: center center;
@@ -41,53 +41,23 @@ html, body{
     background-size: cover; 
 }
 
-.overlay-dot{ /*배경이미지 위에 도트이미지 추가*/
-    background: url(../images/dot.png) repeat;
-    opacity: 0.25; /* 플리커링 해결 투명도 25%로 만듬 */
-    /*no-repeat속성 일부러 안씀*/
-    background-size: auto;/* dot 크기 조정 가능 */
-    pointer-events: none; /* 다른 요소 클릭 막히는 것 방지 */
-    position: absolute; /*좌표의 절대값에 영향을 받게끔 설정*/
-    /*absolute로 지정하면 공중에 뜬 상태가 됨
-    그래서 다음에 오는 태그가 덮어버림*/
-    top: 0;/*좌표 가장 윗쪽에 붙게 함*/
-    z-index: 10;/*position:absolute; 공중에 떠있는거 해결*/
-    /*
-    CSS에서 요소의 쌓임 순서(stack order) 를 결정하는 속성
-    숫자가 높을수록 위에 올라감, 낮을수록 밑에 깔림.
-    모든 태그들은 z-index속성이 기본 0이라고 보면 된다
-    */
-    width: 100%;
-    height: 100vh;
-}
-
-.overlay-dark {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.2); /* 반투명 검은 레이어 */
-  pointer-events: none; /*아래요소 클릭방해안함*/
-  z-index: 9; /* dot보다 아래 */
-}
-
-
 .contents{
     /*contents의 txt를 배경 이미지 위쪽에 올리기*/
     position: absolute;
-    top: 10%; /*위치 조정*/
-    left: 10%; /*위치 조정*/
+    top: 20%; /*위치 조정*/
+    left: 22%; /*위치 조정*/
     color: white;
     font-weight: bold;
     z-index: 20; /*dot보다 위에*/
     /*text-align: center; 중앙정렬*/
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .contents_name{
     font-size: 15vh;
     background-position: center center; 
     background-size: cover; 
+    margin-left: 16%;
     margin-bottom: 25px;
 }
 
@@ -100,7 +70,7 @@ html, body{
 
 .contents_list{
     font-size: 0; /*코드상에 있는 공백 제거*/
-    margin-left: 30%;
+    margin-left: 34%;
 }
 
 .contents_list > li{ /*contents_list 밑에 있는 li태그*/
